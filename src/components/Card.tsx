@@ -5,7 +5,7 @@ import { renderDocument } from "../utils/renderDocument";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const Card2: FC<any> = ({ product, index }) => {
+const Card: FC<any> = ({ product }) => {
   const { name, description, thumbnail } = product.fields;
   const getImageURL = (image: Asset) => {
     return "https:" + image.fields.file.url;
@@ -22,7 +22,7 @@ const Card2: FC<any> = ({ product, index }) => {
       animation.start({
         y: 0,
         opacity: 1,
-        transition: { type: "spring", duration: 1.5, delay: index * 0.5 },
+        transition: { type: "spring", duration: 1.5, delay: 0.5 },
       });
     }
     !inView &&
@@ -32,6 +32,7 @@ const Card2: FC<any> = ({ product, index }) => {
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
+
   return (
     <motion.div
       className="flex content-start max-w-[350px] min-h-[350px] h-auto p-5 rounded shadow-md"
@@ -51,5 +52,5 @@ const Card2: FC<any> = ({ product, index }) => {
   );
 };
 
-export default Card2;
+export default Card;
 2;
