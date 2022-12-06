@@ -34,12 +34,14 @@ const Home: NextPage<any> = ({ products }) => {
           <h1 className="text-white text-5xl animate-slideRight">
             Lorem ipsum dolor sit amet
           </h1>
-          <h2 className="text-white text-3xl">Lorem ipsum dolor sit amet</h2>
+          <h2 className="text-white text-3xl animate-slideLeft">
+            Lorem ipsum dolor sit amet
+          </h2>
         </div>
       </div>
       <div className="px-[10%] fle flex-col justify-between h-auto space-y-[100px] py-16">
         <div className="flex flex-col justify-center items-center w-full space-y-10">
-          <h1 className="text-4xl">Cards with staggered effect</h1>
+          <h1 className="text-4xl">Cards without staggered effect</h1>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
             {products.map((product: any, index: number) => (
               <Card1 product={product} key={index} />
@@ -56,7 +58,7 @@ const Home: NextPage<any> = ({ products }) => {
         </div>
       </div>
       <div className="h-[100px] px-[10%] flex justify-start items-center bg-[#003B5C] text-gray-400">
-        <h2>© Copyright 2022 SE.TECH</h2>
+        <h2>© Copyright 2022 SeTech</h2>
       </div>
     </div>
   );

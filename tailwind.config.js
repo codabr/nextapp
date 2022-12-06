@@ -5,10 +5,15 @@ module.exports = {
     extend: {
       animation: {
         slideRight: "slideRight 1s ease-in",
+        slideLeft: "slideLeft 1s ease-in",
       },
       keyframes: (theme) => ({
         slideRight: {
           "0%": { opacity: 0, marginLeft: "-600px" },
+          "100%": { opacity: 1, marginLeft: "0" },
+        },
+        slideLeft: {
+          "0%": { opacity: 0, marginRight: "-600px" },
           "100%": { opacity: 1, marginLeft: "0" },
         },
       }),
