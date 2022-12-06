@@ -5,7 +5,7 @@ import { renderDocument } from "../utils/renderDocument";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const Card: FC<any> = ({ product }) => {
+const Card: FC<any> = ({ product, index }) => {
   const { name, description, thumbnail } = product.fields;
   const getImageURL = (image: Asset) => {
     return "https:" + image.fields.file.url;
@@ -22,7 +22,11 @@ const Card: FC<any> = ({ product }) => {
       animation.start({
         y: 0,
         opacity: 1,
-        transition: { type: "spring", duration: 1.5, delay: 0.5 },
+        transition: {
+          type: "spring",
+          duration: 1.5,
+          delay: index ? index * 0.5 : 0.5,
+        },
       });
     }
     !inView &&
