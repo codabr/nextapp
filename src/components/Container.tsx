@@ -2,7 +2,10 @@ import React, { FC } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Container: FC<any> = ({ title, children }) => {
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
   return (
     <div className="flex flex-col justify-center items-center w-full space-y-10">
