@@ -19,7 +19,7 @@ const Card: FC<PropsType> = ({ product, num }) => {
     triggerOnce: true,
   };
   const [ref, inView] = useInView(options);
-  console.log(num && num * 0.5);
+
   return (
     <div
       className="flex content-start max-w-[350px] min-h-[350px] h-auto p-5 rounded shadow-md"
