@@ -55,5 +55,5 @@ jobs:
         with:
           app-name: 'nextjs-site'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_588D2E4765E24B1094B649C08679B156 }}
+          publish-profile: ${{ secrets.AZ_PUBLISH_PROFILE }}
           package: .
