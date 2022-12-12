@@ -1,6 +1,5 @@
 import React, { FC, useEffect } from "react";
 import Image from "next/image";
-import { Asset } from "contentful";
 import { renderDocument } from "../utils/renderDocument";
 import { useInView } from "react-intersection-observer";
 
@@ -11,7 +10,7 @@ type PropsType = {
 
 const Card: FC<PropsType> = ({ product, num }) => {
   const { name, description, thumbnail } = product.fields;
-  const getImageURL = (image: Asset) => {
+  const getImageURL = (image: any) => {
     return "https:" + image.fields.file.url;
   };
   const options = {
