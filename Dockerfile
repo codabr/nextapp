@@ -9,9 +9,11 @@ ENV NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN ${CONTENTFUL_ACCESS_TOKEN}
 
 WORKDIR /usr/app
 
-COPY . .
+COPY ["package.json", "package-lock.json*", "./"]
 
-RUN npm ci
+RUN npm install --production --silent
+
+COPY . .
 
 RUN npm run build
 
