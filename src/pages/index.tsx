@@ -22,7 +22,7 @@ const Home: NextPage<any> = ({ products }) => {
         }}
       >
         <div className="flex justify-between items-center">
-          <h1 className="text-white text-[55px] cursor-pointer">SETech</h1>
+          <h1 className="text-white text-[55px] cursor-pointer">SE-Tech</h1>
           <ul className="text-white flex justify-between w-1/2 lg:w-1/6">
             <li>Home</li>
             <li>About</li>
