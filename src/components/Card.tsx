@@ -21,7 +21,7 @@ const Card: FC<PropsType> = ({ product, num }) => {
 
   return (
     <div
-      className="flex content-start max-w-[350px] min-h-[350px] h-auto p-5 rounded shadow-sm"
+      className="flex content-start max-w-[350px] min-h-[350px] h-auto p-5 rounded shadow-md"
       ref={ref}
       style={{
         transform: inView ? "none" : "translateY(200px)",
